@@ -1,0 +1,22 @@
+.container {
+  background-color: #ffffff;
+}
+
+body {
+    background-color: #ff7f00;
+}
+
+div {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+img {
+    margin-top: 5%;
+    height: 100px;
+    width: 80px;
+}
+
+#titleheader {
+    margin-top: 5%;
+}
