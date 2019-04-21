@@ -12,8 +12,8 @@ function getFormElements() {
     var numCerveja, numRefri, numSuco;
     var pesoFeijao, numQueijo, numPao;
     for (i = 0; i < adulto.length; i++) {
-        numAdultos = adulto.elements[i].value;
-        numCriancas = crianca.elements[i].value;
+        numAdultos = parseInt(adulto.elements[i].value);
+        numCriancas = parseInt(crianca.elements[i].value);
     }
     for (i = 0; i < bovino.length; i++) {
         if (bovino.elements[i].checked) {
@@ -44,10 +44,10 @@ function getFormElements() {
     for (i = 0; i < bebida.length; i++) {
         if (bebida.elements[i].checked) {
             output += "<b>" + bebida.elements[i].value + ": </b>";
-            if (bebida.elements[i].value == "Cerveja 200ml") {
+            if (bebida.elements[i].value === "Cerveja 200ml") {
                 output += (numAdultos * 2) + " unidades.<br>";
             } else {
-                if (bebida.elements[i].value == "Regrigerante 2L") {
+                if (bebida.elements[i].value === "Regrigerante 2L") {
                     output += ((numAdultos + numCriancas) / 5).toFixed(0) + " unidades.<br>";;
                 } else {
                     output += ((numAdultos + numCriancas) / 3).toFixed(0) + " unidades.<br>";
@@ -60,10 +60,10 @@ function getFormElements() {
     for (i = 0; i < acompanhamento.length; i++) {
         if (acompanhamento.elements[i].checked) {
             output += "<b>" + acompanhamento.elements[i].value + ": </b>";
-            if (acompanhamento.elements[i].value == "Feijão tropeiro 1kg") {
+            if (acompanhamento.elements[i].value === "Feijão tropeiro 1kg") {
                 output += ((numAdultos + numCriancas) / 5).toFixed(0) + " porções.<br>";
             } else {
-                if (acompanhamento.elements[i].value == "Pão de alho - 6 porções") {
+                if (acompanhamento.elements[i].value === "Pão de alho - 6 porções") {
                     output += ((numAdultos + numCriancas) / 6).toFixed(0) + " unidades.<br>";;
                 } else {
                     output += ((numAdultos + numCriancas) / 5).toFixed(0) + " unidades.<br>";;
@@ -76,13 +76,13 @@ function getFormElements() {
     for (i = 0; i < utensilio.length; i++) {
         if (utensilio.elements[i].checked) {
             output += "<b>" + utensilio.elements[i].value + ": </b>";
-            if (utensilio.elements[i].value == "Carvão 5Kg") {
+            if (utensilio.elements[i].value === "Carvão 5Kg") {
                 output += ((numAdultos + numCriancas) / 5).toFixed(0) + " unidades.<br>";
             } else {
-                if (utensilio.elements[i].value == "Copos") {
+                if (utensilio.elements[i].value === "Copos") {
                     output += (numAdultos + numCriancas) + " unidades.<br>";;
                 } else {
-                    output += ((numAdultos + numCriancas) / 15).toFixed(0) + " unidades.<br>";;
+                    output += parseInt((numAdultos + numCriancas) / 10) + " unidades.<br>";;
                 }
             }
         }
