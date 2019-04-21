@@ -7,10 +7,8 @@ function getFormElements() {
     var acompanhamento = document.getElementById("acompanhamento"); 
     var utensilio = document.getElementById("utensilio");
     var output = "";
-    var i, numAdultos, numCriancas, numBovino = 0, numFrango = 0, numAcomp = 0, numUt = 0;
+    var i, numAdultos, numCriancas, numBovino = 0, numFrango = 0;
     var pesoCarne;
-    var numCerveja, numRefri, numSuco;
-    var pesoFeijao, numQueijo, numPao;
     for (i = 0; i < adulto.length; i++) {
         numAdultos = parseInt(adulto.elements[i].value);
         numCriancas = parseInt(crianca.elements[i].value);
