@@ -20,3 +20,9 @@ img {
 #titleheader {
     margin-top: 5%;
 }
+
+input[type=number] {
+    width: 30%;
+    padding: 6px;
+    box-sizing: border-box;
+}
