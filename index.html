@@ -9,6 +9,7 @@
       <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/style.css">
+      <script type="text/javascript" src="js/script.js"></script>
    </head>
    <body>
        <div class="container background-container col-md-8">
@@ -30,15 +31,15 @@
                 <h5>Quantidade de pessoas</h5>
             </div>
             <div class="col-md-4">
-                <form>
+                <form id="adulto">
                     <h6>Adultos</h6>
-                        <input type="number" step="1" name="adultos" min="0" size="1">
+                        <input type="number" step="1" name="adultos" min="0" size="1" onchange="getFormElements()">
                 </form>
             </div>
             <div class="col-md-4">
-                <form>
+                <form id="crianca">
                     <h6>Crianças</h6>
-                        <input type="number" step="1" name="crianças" min="0" size="1">
+                        <input type="number" step="1" name="crianças" min="0" size="1" onchange="getFormElements()">
                 </form>
             </div>
         </div>
@@ -53,20 +54,20 @@
             </div>
             <div class="col-md-4">
                 <h6>Carne Bovina<h6>
-                <form>
-                    <input type="checkbox" name="bovino1" value="bovino1">Alcatra<br>
-                    <input type="checkbox" name="bovino2" value="bovino2">Carne de sol<br>
-                    <input type="checkbox" name="bovino3" value="bovino3">Contra filé<br>
-                    <input type="checkbox" name="bovino4" value="bovino4">Costela<br>
-                    <input type="checkbox" name="bovino5" value="bovino5">Cupim<br> 
-                    <input type="checkbox" name="bovino6" value="bovino6">Fraldinha<br>
-                    <input type="checkbox" name="bovino7" value="bovino7">Maminha<br>
-                    <input type="checkbox" name="bovino8" value="bovino8">Picanha<br>
+                <form id="bovino">
+                    <input type="checkbox" name="bovino1" value="Alcatra">Alcatra<br>
+                    <input type="checkbox" name="bovino2" value="Carne de sol">Carne de sol<br>
+                    <input type="checkbox" name="bovino3" value="Contra filé">Contra filé<br>
+                    <input type="checkbox" name="bovino4" value="Costela">Costela<br>
+                    <input type="checkbox" name="bovino5" value="Cupim">Cupim<br> 
+                    <input type="checkbox" name="bovino6" value="Fraldinha">Fraldinha<br>
+                    <input type="checkbox" name="bovino7" value="Maminha">Maminha<br>
+                    <input type="checkbox" name="bovino8" value="Picanha">Picanha<br>
                 </form>
             </div>
             <div class="col-md-4">
                 <h6>Carne de Frango</h6>
-                <form>
+                <form id="frango">
                     <input type="checkbox" name="frango1" value="frango1">Coração de frango<br>
                     <input type="checkbox" name="frango2" value="frango2">Coxa e sobrecoxa<br>
                     <input type="checkbox" name="frango2" value="frango2">Linguiça<br>
@@ -83,7 +84,7 @@
                 <h5>Bebidas</h5>
             </div>
             <div class="col-md-4">
-                <form>
+                <form id="bebida">
                     <input type="checkbox" name="bebida1" value="bebida1">Cerveja 200ml<br>
                     <input type="checkbox" name="bebida2" value="bebida2">Regrigerante 2L<br>
                     <input type="checkbox" name="bebida3" value="bebida3">Suco 1L<br>
@@ -101,7 +102,7 @@
             </div>
             <div class="col-md-4">
                 <h6>Acompanhamentos</h6>
-                <form>
+                <form id="acompanhamento">
                     <input type="checkbox" name="acompanhamento1" value="acompanhamento1">Feijão tropeiro<br>
                     <input type="checkbox" name="acompanhamento2" value="acompanhamento2">Pão de alho<br>
                     <input type="checkbox" name="acompanhamento3" value="acompanhamento3">Queijo coalho<br>
@@ -109,7 +110,7 @@
             </div>
             <div class="col-md-4">
                 <h6>Utensílios</h6>
-                <form>
+                <form id="utensilio">
                     <input type="checkbox" name="utensilio1" value="utensilio1">Carvão 5Kg<br>
                     <input type="checkbox" name="utensilio2" value="utensilio2">Copos<br>
                     <input type="checkbox" name="utensilio3" value="utensilio3">Pacote de guardanapos<br>
@@ -125,8 +126,8 @@
             <div class="col-md-4">
                 <h5>Resultados</h5>
             </div>
-            <div class="col-md-8">
-                <form></form>
+            <div class="col-md-8" id="resultado">
+                <input type="button" class="button" value="Calcular" onclick="getFormElements()">
             </div>
         </div>
         <div class="row">
